@@ -7,8 +7,8 @@ import org.junit.jupiter.api.Test;
 class MainTest {
     @Test
     public void numberEqualsTest() {
-        assertEquals(true, Main.numberEquals("123", "123"));
-        assertEquals(true, Main.numberEquals("123", "+123"));
-        assertEquals(false, Main.numberEquals("123", "-123"));
+        assertEquals(true, Main.numberEquals("1234", "1234"));
+        assertEquals(true, Main.numberEquals("1234", "+1234"));
+        assertEquals(false, Main.numberEquals("1234", "-1234"));
     }
 }
