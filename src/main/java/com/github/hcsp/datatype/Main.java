@@ -11,9 +11,6 @@ public class Main {
     // 判断两个字符串是否包含相等的数字
     // 例如a为"+1234"，b为"1234"，返回true
     public static boolean numberEquals(String a, String b) {
-        Integer arg1 = Integer.valueOf(a);
-        Integer arg2 = Integer.valueOf(b);
-
-        return arg1.intValue() == arg2.intValue();
+        return Integer.valueOf(a) == Integer.valueOf(b);
     }
 }
