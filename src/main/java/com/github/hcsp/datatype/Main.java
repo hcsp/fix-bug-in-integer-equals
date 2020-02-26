@@ -24,7 +24,7 @@ public class Main {
         String str ="";
         if (a != null&& !"".equals(a)) {
             for (int i = 0; i < a.length(); i++) {
-                if (a.charAt(i)==45||a.charAt(i) >= 48 && a.charAt(i) <= 57) {
+                if (a.charAt(i)=='-'||a.charAt(i) >= '0' && a.charAt(i) <= '9') {
                     str+= a.charAt(i);
                 }
             }
