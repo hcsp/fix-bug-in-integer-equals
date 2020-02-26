@@ -24,7 +24,7 @@ public class Main {
         String str ="";
         if (a != null&& !"".equals(a)) {
             for (int i = 0; i < a.length(); i++) {
-                if (a.charAt(i) >= 48 && a.charAt(i) <= 57) {
+                if (a.charAt(i)==45||a.charAt(i) >= 48 && a.charAt(i) <= 57) {
                     str+= a.charAt(i);
                 }
             }
@@ -35,7 +35,7 @@ public class Main {
     //方法二：利用正则表达式匹配数字
     public static int chooseNumber2(String a) {
 
-        String regEx="[^0-9]";
+        String regEx="[^0-9-]";
         Pattern p = Pattern.compile(regEx);
         Matcher m = p.matcher(a);
         String str=m.replaceAll("").trim();
