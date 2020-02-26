@@ -16,29 +16,29 @@ public class Main {
 
     //方法一：利用ascii码选取数字，拼成新的字符串数组进行比较
     public static boolean numberEquals(String a, String b) {
-        return chooseNumber(a) == chooseNumber(b);
+        return chooseNumber(a).equals( chooseNumber(b));
     }
 
-    public static int chooseNumber(String a) {
+    public static Integer chooseNumber(String a) {
         a = a.trim();
-        String str = "";
+        String str ="";
         if (a != null&& !"".equals(a)) {
             for (int i = 0; i < a.length(); i++) {
                 if (a.charAt(i) >= 48 && a.charAt(i) <= 57) {
-                    str += a.charAt(i);
+                    str+= a.charAt(i);
                 }
             }
         }
-        return Integer.valueOf(str.toString());
+        return Integer.valueOf(str);
     }
 
     //方法二：利用正则表达式匹配数字
     public static int chooseNumber2(String a) {
-        String str="";
+
         String regEx="[^0-9]";
         Pattern p = Pattern.compile(regEx);
         Matcher m = p.matcher(a);
-        str=m.replaceAll("").trim();
+        String str=m.replaceAll("").trim();
         return Integer.valueOf(str);
     }
 }
