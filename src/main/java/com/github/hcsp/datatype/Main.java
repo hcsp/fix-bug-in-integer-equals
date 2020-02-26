@@ -22,7 +22,7 @@ public class Main {
     public static int chooseNumber(String a) {
         a = a.trim();
         String str = "";
-        if (a != null) {
+        if (a != null&& !"".equals(a)) {
             for (int i = 0; i < a.length(); i++) {
                 if (a.charAt(i) >= 48 && a.charAt(i) <= 57) {
                     str += a.charAt(i);
