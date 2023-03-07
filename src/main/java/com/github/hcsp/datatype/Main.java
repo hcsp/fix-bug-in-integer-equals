@@ -10,7 +10,17 @@ public class Main {
 
     // 判断两个字符串是否包含相等的数字
     // 例如a为"+1234"，b为"1234"，返回true
-    public static boolean numberEquals(String a, String b) {
+   /* public static boolean numberEquals(String a, String b) {
         return Integer.valueOf(a) == Integer.valueOf(b);
+    } */
+    public static boolean numberEquals(String a, String b) {
+        if (Integer.parseInt(a) == Integer.parseInt(b)){
+            return true;
+        }
+        else {
+            return false;
+        }
+
     }
+
 }
